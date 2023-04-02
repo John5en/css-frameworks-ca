@@ -1,0 +1,93 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  font-family: 'Oswald', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+$primary-color: whitesmoke;
+$navbar-brand-color: black;
+
+.navbar {
+  background-color: $primary-color;
+  
+  .navbar-brand {
+    color: $navbar-brand-color;
+    &:hover,
+    &:focus {
+      color: $navbar-brand-color;
+    }
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-nav {
+    margin-right: 0;
+    margin-top: 2px;
+    
+    .nav-item {
+      margin-left: 15px;
+      .nav-link {
+        color: $navbar-brand-color;
+        &:hover,
+        &:focus {
+          color: $navbar-brand-color;
+          background-color: darken($primary-color, 10%);
+        }
+        
+        &.active {
+          color: $primary-color;
+          background-color: $navbar-brand-color;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 1.5rem;
+}
+
+.cardText {
+  margin-top: 1rem;
+  }
+  .create-post {
+    margin-top: 10rem;
+  }
+
+  @media (min-width: 992px) {
+    .card {
+      width: 50rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+ @media screen and (max-width: 768px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+ }

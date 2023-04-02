@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="dist/css/styles.css" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Game Central</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="feed.html">Feed</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile/index.html">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container flex-grow-1">
+      <h1 class="text-center">- Forum, Reviews and more</h1>
+      <h2 class="text-center">Login</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form
+            id="login-form"
+            action="/profile"
+            method="POST"
+            class="needs-validation"
+          >
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                required
+              />
+              <div class="invalid-feedback">Please enter a username.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                minlength="8"
+                required
+              />
+              <div class="invalid-feedback">
+                Password must be at least 8 characters long.
+              </div>
+            </div>
+
+            <div class="form-group mt-4">
+              <button type="submit" class="btn btn-dark btn-block mx-auto">
+                Log in
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <p class="text-center mt-3">Not registered? <a href="#">Sign up</a></p>
+    </div>
+
+    <footer class="footer bg-light mt-auto py-3">
+      <div class="container text-center">&copy; 2023 Game Central</div>
+    </footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          window.location.href = "/profile";
+        });
+    </script>
+  </body>
+</html>
